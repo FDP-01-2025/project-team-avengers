@@ -17,3 +17,14 @@ void Player::loseMoney(int amount) {
     if (money >= amount) money -= amount;
     else money = 0;
 }
+int Player::getLives() const {
+    return lives;
+}
+
+int Player::getMoney() const {
+    return money;
+}
+
+bool Player::isAlive() const {
+    return lives > 0;
+}
