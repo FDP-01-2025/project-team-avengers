@@ -63,3 +63,31 @@ setColor(7); // Reset
         auto end = chrono::steady_clock::now();
 
         chrono::duration<double> elapsed = end - start;
+        
+        if(elapsed.count() > 5.0)
+        {
+              cout << "Too slow! You took " << elapsed.count() << " seconds.\n";
+              continue; 
+        }
+
+        if(answer == result)
+        {
+            cout<<"Correct!"<<endl;
+            correctAnswers++; 
+        }else {
+            cout << "Wrong. The correct answer was " << result << ".\n";
+        }
+
+    }
+    cout << "\nYou got " << correctAnswers << " out of 5 right." << endl;
+
+    if(correctAnswers >= 3)
+    {
+        cout << "You win the math duel!" << endl;
+        return true;
+    }else {
+        cout << "You lost the math duel..." << endl;
+        return false;
+    }
+
+}
