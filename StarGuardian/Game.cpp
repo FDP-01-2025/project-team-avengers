@@ -4,6 +4,7 @@
 #include "src/Utils.h"
 #include "src/mathDuel.h"
 #include "src/MixLaboratory.h"
+#include "src/galactic_escape.h"
 
 
 using namespace std;
@@ -160,8 +161,8 @@ bool Game::visitPlanet(const string& planetName) {
         } else if (planetName == "Jupiter") {
             cout << "Your ship is approaching Jupiter, the giant of eternal storms. Colossal lightning and winds threaten your mission, but the hope of restoring harmony to the universe drives you forward, facing your greatest dangers yet." << endl;
             cout << "You launch yourself into Jupiter's Great Red Spot." <<endl;
-             cout << "Instructions: Dodge the obstacles that appear in your path and keep moving to survive the storm." <<endl;
-            //galactic_escape_play
+            cout << "Instructions: Dodge the obstacles that appear in your path and keep moving to survive the storm." <<endl;
+            result = galactic_escape_play();  
         }
         
 
@@ -182,7 +183,7 @@ bool Game::visitPlanet(const string& planetName) {
             cout << "The journey takes you to Mars, the red planet. Amidst forgotten ruins and mysterious signs, you feel you are not alone. Every step reveals fragments of a lost civilization and unexpected challenges, but your determination to restore order does not waver." << endl;
             cout<< "You enter the Martian sandstorm." <<endl;
             cout<< "Correctly answer the math challenges before your opponent to win the duel and advance." <<endl;
-             result = MathDuel();
+            result = MathDuel();
         } else if (planetName == "Jupiter") {
             cout << "Your ship is approaching Jupiter, the giant of eternal storms. Colossal lightning and winds threaten your mission, but the hope of restoring harmony to the universe drives you forward, facing your greatest dangers yet." << endl;
             cout << "You launch yourself into Jupiter's Great Red Spot." <<endl;
