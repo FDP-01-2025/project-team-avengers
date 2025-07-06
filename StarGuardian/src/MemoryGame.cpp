@@ -11,7 +11,7 @@ using namespace std;
 
 bool memoryGame() 
 {
-    setColor(14); // Blue
+setColor(14); // Blue
 cout << "╔══════════════════════════════════════════════════════════════╗" << endl;
 setColor(9); // Yellow (ASCII)
 cout << R"(

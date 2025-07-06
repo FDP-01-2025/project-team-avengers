@@ -42,7 +42,21 @@ void Game::start() {
     }
 
     if (!player.isAlive()) {
-        cout << "\nYou have no lives left. Game over." << endl;
+
+        setColor(9); // Blue
+cout << "╔══════════════════════════════════════════════════════════════╗" << endl;
+setColor(12); // Red (ASCII)
+cout << R"(
+  ___   __   _  _  ____     __   _  _  ____  ____ 
+ / __) / _\ ( \/ )(  __)   /  \ / )( \(  __)(  _ \
+( (_ \/    \/ \/ \ ) _)   (  O )\ \/ / ) _)  )   /
+ \___/\_/\_/\_)(_/(____)   \__/  \__/ (____)(__\_)
+)" << endl;
+setColor(9); // Blue
+cout << "╚══════════════════════════════════════════════════════════════╝" << endl;
+setColor(12); 
+        cout << "\nYou have no lives left. " << endl;
+        setColor(7); 
     } else {
         cout << "\n🎉 CONGRATULATIONS! 🎉" << endl;
         cout << "You've completed your journey through all " << totalPlanets << " planets!" << endl;
@@ -193,7 +207,7 @@ bool Game::visitPlanet(const string& planetName) {
             cout << "Your ship is approaching Jupiter, the giant of eternal storms. Colossal lightning and winds threaten your mission, but the hope of restoring harmony to the universe drives you forward, facing your greatest dangers yet." << endl;
             cout << "You launch yourself into Jupiter's Great Red Spot." <<endl;
             cout << "Navigate through the dense gas storms. Gravity will change unexpectedly and visibility will be low. Use your skills to find the correct path and avoid being lost in the storm!" <<endl;
-            result =  gravityMaze();
+            //result =  gravityMaze();
         }
        // read this: Connect the real reaction game function here
         
