@@ -8,6 +8,8 @@
 #include "src/galactic_escape.h"
 #include "src/ReactionGame.h"
 #include "src/gravity_game.h"
+#include "src/FinalBattle.h"
+#include "src/OddOneGame.h"
 
 
 using namespace std;
@@ -95,7 +97,7 @@ bool Game::visitPlanet(const string& planetName) {
         }
 
         // Final minigame execution
-        //finalBattle
+        result = finalBattle();
 
         if (result) {
             int reward = 200;
@@ -160,7 +162,7 @@ bool Game::visitPlanet(const string& planetName) {
             cout << "The journey takes you to Mars, the red planet. Amidst forgotten ruins and mysterious signs, you feel you are not alone. Every step reveals fragments of a lost civilization and unexpected challenges, but your determination to restore order does not waver." << endl;
             cout<< "You enter the Martian sandstorm." <<endl;
              cout<< "Analyze the objects that appear and select the one that doesn't belong in the group. Only the most attentive will be able to escape the storm!" <<endl;
-            //OddOneGame
+            result = oddOneGame();
         } else if (planetName == "Jupiter") {
             cout << "Your ship is approaching Jupiter, the giant of eternal storms. Colossal lightning and winds threaten your mission, but the hope of restoring harmony to the universe drives you forward, facing your greatest dangers yet." << endl;
             cout << "You launch yourself into Jupiter's Great Red Spot." <<endl;
