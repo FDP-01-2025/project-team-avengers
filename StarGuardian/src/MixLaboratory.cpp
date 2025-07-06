@@ -54,3 +54,25 @@ void showFeedback(const int formula[], const int mix[]) {
         }
     }
 }
+// Main function of the minigame to call from your main game
+bool PlayMixLaboratory() {
+    int formula[FORMULA_SIZE];
+    int mix[FORMULA_SIZE];
+    int attempts = 0;
+
+    setColor(14); // Blue
+cout << "╔══════════════════════════════════════════════════════════════╗" << endl;
+setColor(9); // Yellow (ASCII)
+cout << R"(
+ ___ ___  ____  __ __      _       ____  ____    ___   ____    ____  ______   ___   ____   __ __ 
+|   |   ||    ||  |  |    | |     /    ||    \  /   \ |    \  /    ||      | /   \ |    \ |  |  |
+| _   _ | |  | |  |  |    | |    |  o  ||  o  )|     ||  D  )|  o  ||      ||     ||  D  )|  |  |
+|  \_/  | |  | |_   _|    | |___ |     ||     ||  O  ||    / |     ||_|  |_||  O  ||    / |  ~  |
+|   |   | |  | |     |    |     ||  _  ||  O  ||     ||    \ |  _  |  |  |  |     ||    \ |___, |
+|   |   | |  | |  |  |    |     ||  |  ||     ||     ||  .  \|  |  |  |  |  |     ||  .  \|     |
+|___|___||____||__|__|    |_____||__|__||_____| \___/ |__|\_||__|__|  |__|   \___/ |__|\_||____/ 
+                                                                                                 
+)" << endl;
+setColor(14); // Blue
+cout << "╚══════════════════════════════════════════════════════════════╝" << endl;
+setColor(7); // Reset
