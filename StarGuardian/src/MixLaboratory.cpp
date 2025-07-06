@@ -76,3 +76,27 @@ cout << R"(
 setColor(14); // Blue
 cout << "╚══════════════════════════════════════════════════════════════╝" << endl;
 setColor(7); // Reset
+
+generateSecretFormula(formula);
+
+    while (attempts < MAX_ATTEMPTS) {
+        cout << "\nAttempt #" << (attempts + 1) << " of " << MAX_ATTEMPTS << ":\n";
+        askPlayerMix(mix);
+
+        if (compareFormulas(formula, mix)) {
+            cout << "Correct formula! You win!\n";
+            return true;
+        } else {
+            showFeedback(formula, mix);
+            attempts++;
+        }
+    }
+
+    cout << "You've used all your attempts!\n";
+    cout << "The secret formula was: ";
+    for (int i = 0; i < FORMULA_SIZE; ++i) {
+        cout << formula[i] << " ";
+    }
+    cout << "\nBetter luck next time!\n";
+    return false;
+}
