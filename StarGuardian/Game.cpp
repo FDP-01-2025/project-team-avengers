@@ -3,6 +3,7 @@
 #include "src/Game.h"
 #include "src/Utils.h"
 #include "src/mathDuel.h"
+#include "src/MixLaboratory.h"
 
 
 using namespace std;
@@ -150,7 +151,7 @@ bool Game::visitPlanet(const string& planetName) {
             cout << "After overcoming the trials of Mercury, you arrive on Venus. Toxic clouds and acid rain hide ancient secrets. Here, the Guardian must rely on their wits to navigate the beauty and danger, while the forces of chaos lurk in the shadows." << endl;
             cout << "You have decided to cross the acid rain of Venus"<<endl;
                cout << "Mix the elements in the correct order to create a protective substance. If you fail, acid rain will damage your ship."<<endl;
-            //MixLaboratory
+             result= PlayMixLaboratory();
         } else if (planetName == "Mars") {
             cout << "The journey takes you to Mars, the red planet. Amidst forgotten ruins and mysterious signs, you feel you are not alone. Every step reveals fragments of a lost civilization and unexpected challenges, but your determination to restore order does not waver." << endl;
             cout<< "You enter the Martian sandstorm." <<endl;
