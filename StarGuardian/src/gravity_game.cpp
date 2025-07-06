@@ -45,16 +45,3 @@ void selectRandomMaze() {
         }
     }
 }
-
-void showMaze() {
-    for (int i = 0; i < maze_size; ++i) {
-        for (int j = 0; j < maze_size; ++j) {
-            if (i == playerX && j == playerY)
-                cout << 'G' << ' '; // G = Guardian
-            else
-                cout << maze[i][j] << ' ';
-        }
-        cout << '\n';
-    }
-    cout << "\nWarnings: " << warnings << "/" << MAX_WARNINGS << "\n";
-}
