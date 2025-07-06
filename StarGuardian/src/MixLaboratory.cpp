@@ -23,3 +23,34 @@ void askPlayerMix(int mix[]) {
         cin >> mix[i];
     }
 }
+// Compares the player's mix with the secret formula
+bool compareFormulas(const int formula[], const int mix[]) {
+    for (int i = 0; i < FORMULA_SIZE; ++i) {
+        if (mix[i] != formula[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Shows an error message depending on the failure
+void showFeedback(const int formula[], const int mix[]) {
+    for (int i = 0; i < FORMULA_SIZE; ++i) {
+        if (mix[i] != formula[i]) {
+            switch (i) {
+                case 0:
+                    cout << "Error in the first ingredient: the mix exploded!\n" << endl;
+                    break;
+                case 1:
+                    cout << "Second ingredient incorrect: mysterious smoke appears!" << endl;
+                    break;
+                case 2:
+                    cout << "Third ingredient failed: unstable mix!" << endl;
+                    break;
+                default:
+                    cout << "Incorrect mix." << endl ;
+            }
+            return;
+        }
+    }
+}
