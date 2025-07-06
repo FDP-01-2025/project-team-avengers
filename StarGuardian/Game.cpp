@@ -2,6 +2,7 @@
 #include <iostream>
 #include "src/Game.h"
 #include "src/Utils.h"
+#include "src/MemoryGame.h"
 #include "src/mathDuel.h"
 #include "src/MixLaboratory.h"
 #include "src/galactic_escape.h"
@@ -147,7 +148,7 @@ bool Game::visitPlanet(const string& planetName) {
             cout << "In one corner of the universe, balance is at stake. As a Space Ranger, your mission is to restore order and protect galactic peace. Your journey begins on Mercury, the fiery sentinel of the solar system. The extreme heat tests your ship and your courage, but you know that every mission begins with a brave first step." << endl;
             cout << "You have chosen the path of solar flares." << endl;
             cout << "In this game, you'll test your vision. Pay close attention to the sequence of symbols that appear and repeat them in the same order. Only then will you be able to pass through the flames and advance on your mission!" << endl;
-            //memoryGame
+            result = memoryGame();
         } else if (planetName == "Venus") {
             cout << "After overcoming the trials of Mercury, you arrive on Venus. Toxic clouds and acid rain hide ancient secrets. Here, the Guardian must rely on their wits to navigate the beauty and danger, while the forces of chaos lurk in the shadows." << endl;
             cout << "You have decided to cross the acid rain of Venus"<<endl;
