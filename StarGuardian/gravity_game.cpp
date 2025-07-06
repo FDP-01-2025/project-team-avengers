@@ -58,3 +58,34 @@ void showMaze() {
     }
     cout << "\nWarnings: " << warnings << "/" << MAX_WARNINGS << "\n";
 }
+
+bool isValidMove(int dx, int dy) {
+    int newX = playerX + dx;
+    int newY = playerY + dy;
+
+    if (newX < 0 || newX >= maze_size || newY < 0 || newY >= maze_size)
+        return false;
+
+    char gravity = maze[playerX][playerY];
+
+    switch (gravity) {
+        case '^': return dx == -1 && dy == 0;
+        case 'v': return dx == 1 && dy == 0;
+        case '<': return dx == 0 && dy == -1;
+        case '>': return dx == 0 && dy == 1;
+        default: return false;
+    }
+}
+
+void movePlayer(int dx, int dy) {
+    if (isValidMove(dx, dy)) {
+        playerX += dx;
+        playerY += dy;
+        cout << "You moved correctly...\n";
+    } else {
+        cout << "Invalid move. You're sent back to the start.\n";
+        playerX = 0;
+        playerY = 0;
+        warnings++;
+    }
+}
