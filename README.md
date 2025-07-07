@@ -44,7 +44,7 @@ With this command your will enter into the whole StarGuardian folder.
 
 8. The **second** command is:
 g++ main.cpp Game.cpp Player.cpp src/*.cpp -o output/star_guardian.exe
-With this command the program will create an ejecutable archive with all the .cpp games on the src folder.
+With this command the program will create an executable file with all the .cpp games on the src folder.
 
 10. And the **third** command is:
 .\output\star_guardian.exe
