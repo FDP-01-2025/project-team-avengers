@@ -7,7 +7,8 @@
 #include "src/mathDuel.h"
 #include "src/MixLaboratory.h"
 #include "src/galactic_escape.h"
-#include "src/ReactionGame.h"
+#include "src/ReactionGame.h" 
+#include "src/gravity_game.h"
 #include "src/FinalBattle.h"
 #include "src/OddOneGame.h"
 
@@ -207,7 +208,7 @@ bool Game::visitPlanet(const string& planetName) {
             cout << "Your ship is approaching Jupiter, the giant of eternal storms. Colossal lightning and winds threaten your mission, but the hope of restoring harmony to the universe drives you forward, facing your greatest dangers yet." << endl;
             cout << "You launch yourself into Jupiter's Great Red Spot." <<endl;
             cout << "Navigate through the dense gas storms. Gravity will change unexpectedly and visibility will be low. Use your skills to find the correct path and avoid being lost in the storm!" <<endl;
-            //result =  gravityMaze();
+            result = gravityMaze(); 
         }
        // read this: Connect the real reaction game function here
         
