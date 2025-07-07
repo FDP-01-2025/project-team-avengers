@@ -40,14 +40,17 @@ git clone https://github.com/FDP-01-2025/project-team-avengers.git
 
 6. The **first** command you will paste on the terminal is:
 cd .\StarGuardian\
+With this command your will enter into the whole StarGuardian folder.
 
-7. The **second** command is:
-g++ main.cpp Game.cpp Player.cpp src/*.cpp -o output/StarGuardian.exe
+8. The **second** command is:
+g++ main.cpp Game.cpp Player.cpp src/*.cpp -o output/star_guardian.exe
+With this command the program will create an ejecutable archive with all the .cpp games on the src folder.
 
-8. And the **third** command is:
-.\output\StarGuardian.exe
+10. And the **third** command is:
+.\output\star_guardian.exe
+This last command will execute the whole program and the game will start running.
 
-9. Now the game will start on your console
+12. Now the game will start on your console
 
 ## Images or mockups of the game
 ![alt text](Mockup.jpg)
