@@ -10,6 +10,7 @@ int playerX = 0;
 int playerY = 0;
 int warnings = 0;
 char maze[5][5];
+const int MAX_WARNINGS = 3;
 
 void selectRandomMaze() {
     srand(time(0)); // Random seed
@@ -98,7 +99,9 @@ void movePlayer(int dx, int dy) {
 
 bool gravityMaze() {
 
-    ::warnings = 0;
+    warnings = 0;
+    playerX = 0;
+    playerY = 0;
 
     setColor(12); // Red
     cout << "╔══════════════════════════════════════════════════════════════╗" << endl;
