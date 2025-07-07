@@ -98,6 +98,8 @@ void movePlayer(int dx, int dy) {
 
 bool gravityMaze() {
 
+    ::warnings = 0;
+
     setColor(12); // Red
     cout << "╔══════════════════════════════════════════════════════════════╗" << endl;
     setColor(14); // Blue
@@ -132,9 +134,13 @@ bool gravityMaze() {
         cin >> option;
 
         switch(option) {
+            case 'W':
             case 'w': movePlayer(-1, 0); break;
+            case 'S':
             case 's': movePlayer(1, 0); break;
+            case 'A':
             case 'a': movePlayer(0, -1); break;
+            case 'D':
             case 'd': movePlayer(0, 1); break;
             default: cout << "Invalid command.\n";
         }
