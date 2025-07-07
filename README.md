@@ -39,7 +39,7 @@ git clone https://github.com/FDP-01-2025/project-team-avengers.git
 5. When the code open on visual studio, click on terminal, then in New Terminal.
 
 6. The **first** command you will paste on the terminal is:
-cd StarGuardian
+cd .\StarGuardian\
 
 7. The **second** command is:
 g++ main.cpp Game.cpp Player.cpp src/*.cpp -o output/StarGuardian.exe
