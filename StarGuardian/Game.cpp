@@ -2,12 +2,12 @@
 #include <iostream>
 #include "src/Game.h"
 #include "src/Utils.h"
+#include "src/Encrypted.h"
 #include "src/MemoryGame.h"
 #include "src/mathDuel.h"
 #include "src/MixLaboratory.h"
 #include "src/galactic_escape.h"
 #include "src/ReactionGame.h"
-#include "src/gravity_game.h"
 #include "src/FinalBattle.h"
 #include "src/OddOneGame.h"
 
@@ -196,7 +196,7 @@ bool Game::visitPlanet(const string& planetName) {
             cout << "After overcoming the trials of Mercury, you arrive on Venus. Toxic clouds and acid rain hide ancient secrets. Here, the Guardian must rely on their wits to navigate the beauty and danger, while the forces of chaos lurk in the shadows." << endl;
             cout << "You have decided to cross the acid rain of Venus"<<endl;
             cout << "Solve the puzzle presented to unlock the passage and continue your mission." << endl;
-             //encryptedGame
+             result = encryptedGame();
 
         } else if (planetName == "Mars") {
             cout << "The journey takes you to Mars, the red planet. Amidst forgotten ruins and mysterious signs, you feel you are not alone. Every step reveals fragments of a lost civilization and unexpected challenges, but your determination to restore order does not waver." << endl;
