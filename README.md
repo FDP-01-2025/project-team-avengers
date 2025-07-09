@@ -53,7 +53,8 @@ This last command will execute the whole program and the game will start running
 12. Now the game will start on your console
 
 ## Images or mockups of the game
-![alt text](Mockup.jpg)
+![alt text](Mockup.jpg) ![Mockup](https://github.com/user-attachments/assets/a3b19509-5f07-4a94-b69c-cabba07028eb)
+
 
 ## Full names of all members
 1. Diego Aramis Villanueva Caballero 
